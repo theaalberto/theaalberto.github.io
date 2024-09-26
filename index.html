@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Althea's Coquette-Themed Website</title>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body takes up full height of the viewport */
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('https://secure.static.tumblr.com/e6becffc9de6ec6b91393099b39b6412/dalffql/5GYnjej8u/tumblr_static_tumblr_static_9wwmzu7qrq8k8kc0csowkko48_640.gif'); /* Add your background image here */
+            background-size: cover; /* Make sure the image covers the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            color: #333;
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column; /* Makes the body a column-based flexbox */
+        }
+        header {
+            background-color: rgba(247, 216, 232, 0.8); /* Add semi-transparency */
+            padding: 20px;
+            border-bottom: 2px solid #f5c6d6;
+        }
+        header h1 {
+            font-size: 3vw; /* Responsive font size */
+            color: #b74168;
+            font-family: 'Garamond', serif;
+        }
+        .container {
+            flex: 1; /* Makes the container take up available space */
+            margin: 30px auto;
+            width: 90%; /* Makes it responsive */
+            max-width: 1200px; /* Limits the max width on larger screens */
+            padding: 0 15px;
+        }
+        h2 {
+            font-size: 2.5vw; /* Responsive font size */
+            color: #b74168; /* Darker pink */
+            font-family: 'Garamond', serif;
+        }
+        .button-container {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Wrap buttons on smaller screens */
+        }
+        .button {
+            background-color: rgba(247, 216, 232, 0.8); /* Button with semi-transparent background */
+            border: 2px solid #f5c6d6; /* Light border */
+            color: #b74168; /* Dark pink text */
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px 15px;
+            cursor: pointer;
+            border-radius: 25px; /* Rounded corners for soft feel */
+            font-family: 'Garamond', serif;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: background-color 0.3s ease;
+            flex: 1 1 250px; /* Make buttons responsive */
+            max-width: 300px; /* Limit button width */
+        }
+        .button:hover {
+            background-color: rgba(245, 198, 214, 0.8); /* Slightly darker on hover */
+            border-color: #b74168; /* Darker border on hover */
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 6vw; /* Adjust heading on smaller screens */
+            }
+            h2 {
+                font-size: 5vw; /* Adjust subheading on smaller screens */
+            }
+            .button {
+                padding: 10px 20px; /* Smaller padding for mobile */
+                font-size: 14px;
+                margin: 10px 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button {
+                font-size: 12px; /* Smaller buttons for mobile */
+                padding: 8px 16px;
+                margin: 10px 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Althea's Page</h1>
+    </header>
+
+    <div class="container">
+        <h2>Activities for Web Development</h2>
+        <div class="button-container">
+            <a href="https://example1.com" class="button">Activity 1</a>
+            <a href="https://example2.com" class="button">Activity 2</a>
+            <a href="https://example3.com" class="button">Activity 3</a>
+        </div>
+    </div>
+
+</body>
+</html>
