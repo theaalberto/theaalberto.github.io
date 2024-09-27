@@ -3,111 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Althea's Coquette-Themed Website</title>
+    <title>Pink iPhone 15 Showcase</title>
     <style>
-        html, body {
-            height: 100%; /* Ensure the body takes up full height of the viewport */
+        * {
             margin: 0;
-            font-family: 'Courier New', Courier, monospace;
-            background-image: url('https://secure.static.tumblr.com/e6becffc9de6ec6b91393099b39b6412/dalffql/5GYnjej8u/tumblr_static_tumblr_static_9wwmzu7qrq8k8kc0csowkko48_640.gif'); /* Add your background image here */
-            background-size: cover; /* Make sure the image covers the entire page */
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* Prevent the image from repeating */
-            color: #333;
-            text-align: center;
+            padding: 0;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column; /* Makes the body a column-based flexbox */
-        }
-        header {
-            background-color: rgba(247, 216, 232, 0.8); /* Add semi-transparency */
-            padding: 20px;
-            border-bottom: 2px solid #f5c6d6;
-        }
-        header h1 {
-            font-size: 3vw; /* Responsive font size */
-            color: #b74168;
-            font-family: 'Garamond', serif;
-        }
-        .container {
-            flex: 1; /* Makes the container take up available space */
-            margin: 30px auto;
-            width: 90%; /* Makes it responsive */
-            max-width: 1200px; /* Limits the max width on larger screens */
-            padding: 0 15px;
-        }
-        h2 {
-            font-size: 2.5vw; /* Responsive font size */
-            color: #b74168; /* Darker pink */
-            font-family: 'Garamond', serif;
-        }
-        .button-container {
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; /* Wrap buttons on smaller screens */
-        }
-        .button {
-            background-color: rgba(247, 216, 232, 0.8); /* Button with semi-transparent background */
-            border: 2px solid #f5c6d6; /* Light border */
-            color: #b74168; /* Dark pink text */
-            padding: 12px 24px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            margin: 10px 15px;
-            cursor: pointer;
-            border-radius: 25px; /* Rounded corners for soft feel */
-            font-family: 'Garamond', serif;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            transition: background-color 0.3s ease;
-            flex: 1 1 250px; /* Make buttons responsive */
-            max-width: 300px; /* Limit button width */
-        }
-        .button:hover {
-            background-color: rgba(245, 198, 214, 0.8); /* Slightly darker on hover */
-            border-color: #b74168; /* Darker border on hover */
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 6vw; /* Adjust heading on smaller screens */
-            }
-            h2 {
-                font-size: 5vw; /* Adjust subheading on smaller screens */
-            }
-            .button {
-                padding: 10px 20px; /* Smaller padding for mobile */
-                font-size: 14px;
-                margin: 10px 5px;
-            }
         }
 
-        @media (max-width: 480px) {
-            .button {
-                font-size: 12px; /* Smaller buttons for mobile */
-                padding: 8px 16px;
-                margin: 10px 3px;
-            }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* SF Pro font stack */
+            background-image: url('https://img.freepik.com/free-vector/gradient-luxury-ribbon-background_52683-151698.jpg?size=626&ext=jpg&ga=GA1.1.1868179201.1720623005&semt=ais_hybrid');
+            background-size: cover; /* Ensures the image covers the whole area */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            background-position: center; /* Centers the image */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 204, 241, 0.9); /* Transparent background */
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Enable flexbox for alignment */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+        }
+
+        header img {
+            max-width: 80px; /* Increased max width for the logo */
+            margin-right: 10px; /* Space between logo and text */
+        }
+
+        header h1 {
+            color: #555; /* Match footer color */
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: normal; /* Set the font weight to normal */
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; /* Adjust height as needed */
+            padding: 20px;
+        }
+
+        .product-showcase {
+            display: flex;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the whole section */
+        }
+
+        .image-container {
+            background-color: rgba(251, 245, 249, 0.7); /* Light pink background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .iphone-image {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .details-container {
+            background-color: rgba(255, 255, 255, 0.9); /* White background for the details */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+        }
+
+        .details-container h2 {
+            font-size: 2em;
+            color: #ff1493;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-container p {
+            margin: 10px 0;
+        }
+
+        .details-container ul {
+            margin-top: 10px;
+        }
+
+        .details-container ul li {
+            margin-bottom: 8px;
+        }
+
+        button.buy-now {
+            background-color: #ff1493;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button.buy-now:hover {
+            background-color: #e6007a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 204, 241, 0.9);
+            color: #555; /* Footer color */
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to Althea's Page</h1>
+        <img src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png" alt="Logo" />
+        <h1>iPhone 15</h1>
     </header>
 
-    <div class="container">
-        <h2>Activities for Web Development</h2>
-        <div class="button-container">
-            <a href="https://example1.com" class="button">Activity 1</a>
-            <a href="https://example2.com" class="button">Activity 2</a>
-            <a href="https://example3.com" class="button">Activity 3</a>
-        </div>
-    </div>
+    <main>
+        <section class="product-showcase">
+            <div class="image-container">
+                <img src="https://img.xfinitymobile.com/image/fetch/e_trim/w_300,h_420,c_fit,f_auto,q_auto,fl_lossy/https%3A%2F%2Fimg.xfinitymobile.com%2Fimage%2Fupload%2Fv1694553712%2Fclient%2Fcatalog%2Fdevices%2Fapple%2FApple_iPhone-15_Pink_PRI.png" alt="Pink iPhone 15" class="iphone-image">
+            </div>
+            <div class="details-container">
+                <h2>iPhone 15 - Pink</h2>
+                <p>The iPhone 15 in stunning pink combines powerful technology with a beautiful design. It's more than just a phone; it's a statement.</p>
+                <ul>
+                    <li>6.1-inch Super Retina XDR display</li>
+                    <li>New Pink finish</li>
+                    <li>A16 Bionic Chip for lightning-fast performance</li>
+                    <li>Advanced dual-camera system</li>
+                    <li>5G capability</li>
+                </ul>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Apple Inc. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
