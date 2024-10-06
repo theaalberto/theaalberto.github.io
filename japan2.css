@@ -1,21 +1,22 @@
 .navbar {
-    font-family: 'https://fonts.google.com/specimen/Afacad+Flux';
-
     background-color: rgb(255, 235, 101);
 }
 
-/* Add the image background */
+.container-fluid{
+    font-family: "Pacifico", cursive;
+}
+
+.book{
+    font-family: "Afacad Flux", sans-serif;
+}
+
 body {
     background-image: url('https://i.pinimg.com/originals/db/74/f4/db74f485ccbcfacc9ee9ee171e101eea.gif');
-    /* Replace with your image file */
     background-size: cover;
-    /* Make sure the image covers the entire page */
     background-position: center;
-    /* Center the image */
     background-repeat: no-repeat;
-    /* Prevent the image from repeating */
     height: 100vh;
-    /* Full viewport height */
     color: white;
-    /* Change text color for visibility */
 }
+
+
