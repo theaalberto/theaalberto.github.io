@@ -10,7 +10,7 @@
 
     <style>
         body {
-            transition: background-color 0.5s, color 0.5s; /* Smooth transition for dark mode */
+            transition: background-color 0.5s, color 0.5s; 
         }
 
         .custom-navbar {
@@ -18,25 +18,24 @@
         }
 
         .navbar-brand {
-            color: white; /* Change font color to white */
+            color: white; 
         }
 
         .navbar-brand:hover {
-            color: white; /* Ensure color remains white on hover */
+            color: white; 
         }
 
         .carousel-item img {
-            width: 100%; /* Make image take full width */
-            height: auto; /* Maintain aspect ratio */
-            max-height: 75vh; /* Limit max height to 75% of the viewport height */
-            object-fit: cover; /* Cover the area while maintaining aspect ratio */
+            width: 100%; 
+            height: auto; 
+            max-height: 75vh; 
+            object-fit: cover; 
         }
 
         .collapsible-section {
-            display: none; /* Initially hide the section */
+            display: none; 
         }
 
-        /* Dark mode styles */
         .dark-mode {
             background-color: #121212;
             color: #ffffff;
@@ -46,9 +45,8 @@
             background-color: #1e1e1e;
         }
 
-        /* Align button to the right */
         .navbar-button {
-            margin-left: auto; /* Push the button to the right */
+            margin-left: auto; 
         }
     </style>
 </head>
@@ -88,10 +86,8 @@
         </div>
     </div>
 
-    <!-- Cards Section -->
     <div class="container my-4">
         <div class="row" id="card-container">
-            <!-- Cards will be generated here -->
         </div>
     </div>
 
@@ -111,7 +107,6 @@
     </footer>
 
     <script>
-        // Array of card data with additional images for hover effect
         const cardData = [
             {
                 title: "O.TWO.O Super Stay Long Lasting Waterproof Black Mascara",
@@ -145,11 +140,9 @@
             },
         ];
 
-        // Function to generate cards
         function generateCards() {
             const container = document.getElementById("card-container");
             cardData.forEach(data => {
-                // Create card element
                 const card = document.createElement("div");
                 card.className = "col-md-4 mb-4";
                 card.innerHTML = `
@@ -163,12 +156,10 @@
                         </div>
                     </div>
                 `;
-                // Append card to container
                 container.appendChild(card);
             });
         }
 
-        // Function to toggle the collapsible section
         function toggleFooter() {
             const collapsibleSection = document.getElementById("collapsibleFooter");
             if (collapsibleSection.style.display === "none" || collapsibleSection.style.display === "") {
@@ -180,22 +171,19 @@
             }
         }
 
-        // Function to toggle dark mode
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             const button = document.getElementById("darkModeToggle");
             button.innerText = document.body.classList.contains('dark-mode') ? 'Light' : 'Dark';
         }
 
-        // Call function to generate cards on page load
         window.onload = () => {
             generateCards();
-            // toggleFooter(); // Ensure collapsible section is hidden initially - REMOVE THIS LINE
+
         };
 
-        // Attach event listener to the buttons
         document.getElementById("toggleFooterButton").onclick = toggleFooter;
-        document.getElementById("darkModeToggle").onclick = toggleDarkMode; // Add event listener for dark mode toggle
+        document.getElementById("darkModeToggle").onclick = toggleDarkMode; 
 
     </script>
 
