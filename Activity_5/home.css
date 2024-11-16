@@ -1,6 +1,31 @@
 .navbar{
     background-color: rgb(255, 235, 101);
 }
+.navbar {
+    background-color: rgb(255, 235, 101);
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .navbar-brand img {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .navbar .navbar-text {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
 
 .container-fluid{
     font-family: "Pacifico", cursive;
@@ -10,13 +35,12 @@
     font-family: "Afacad Flux", sans-serif;
 }
 
-/* home.css */
 body {
-    background-image: url('japan.jpg'); /* Change this to your image path */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    height: 100vh; /* Ensures the body takes the full height of the viewport */
+    background-image: url('japan.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh; 
 }
 
 .banner{
