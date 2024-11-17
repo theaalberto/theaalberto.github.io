@@ -49,6 +49,7 @@
             align-items: center;
             min-height: 80vh; /* Adjust height as needed */
             padding: 20px;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         .product-showcase {
@@ -57,6 +58,9 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the whole section */
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            width: 100%; /* Full width by default */
+            max-width: 1200px; /* Limit the maximum width on larger screens */
         }
 
         .image-container {
@@ -64,10 +68,13 @@
             padding: 20px;
             border-radius: 10px;
             margin-right: 20px;
+            width: 100%; /* Full width on smaller screens */
+            max-width: 400px; /* Limit the width for larger screens */
+            box-sizing: border-box; /* Include padding in the width calculation */
         }
 
         .iphone-image {
-            max-width: 300px;
+            max-width: 100%; /* Make image responsive */
             border-radius: 10px;
         }
 
@@ -76,6 +83,7 @@
             padding: 20px;
             border-radius: 10px;
             max-width: 500px;
+            width: 100%; /* Full width on smaller screens */
         }
 
         .details-container h2 {
@@ -104,6 +112,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
+            width: 100%; /* Full width on smaller screens */
         }
 
         button.buy-now:hover {
@@ -118,6 +127,41 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em; /* Reduce header size for smaller screens */
+            }
+
+            .product-showcase {
+                flex-direction: column; /* Stack the image and details vertically on smaller screens */
+                align-items: center; /* Center align items */
+            }
+
+            .image-container {
+                margin-right: 0;
+                margin-bottom: 20px; /* Add space below image */
+            }
+
+            .details-container {
+                max-width: 100%; /* Allow details container to be full width */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em; /* Further reduce the font size for very small screens */
+            }
+
+            .product-showcase {
+                padding: 10px; /* Reduce padding */
+            }
+
+            button.buy-now {
+                padding: 8px 16px; /* Smaller button for small screens */
+            }
         }
     </style>
 </head>
@@ -143,7 +187,9 @@
                     <li>Advanced dual-camera system</li>
                     <li>5G capability</li>
                 </ul>
-                <button class="buy-now">Buy Now</button>
+                <a href="https://www.apple.com/ph/store?afid=p238%7Csx1Sv1XMY-dc_mtid_18707vxu38484_pcrid_716198925102_pgrid_16280229732_pntwk_g_pchan__pexid__ptid_kwd-12522920_&cid=aos-ph-kwgo-brand--slid---product-" target="_blank">
+                    <button class="buy-now">Buy Now</button>
+                </a>
             </div>
         </section>
     </main>
