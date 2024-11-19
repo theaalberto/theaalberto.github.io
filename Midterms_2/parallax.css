@@ -41,11 +41,7 @@
 
 #keyart-1 {
 	background-image: url(img/verythea.png);
-	background-size: contain; /* Makes the image fit within the container while maintaining its aspect ratio */
-	background-repeat: no-repeat; /* Prevents the image from repeating */
-	background-position: center; /* Centers the image in the container */
-	height: 200px; /* Adjust to match the desired section height */
-	margin-top: 250px;
+
 }
 #keyart-2 {
 	background-image: url(img/hearts.png);

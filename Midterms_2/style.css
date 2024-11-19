@@ -4,13 +4,16 @@ html, body {
     padding: 0;
 }
 .main-content {
-    background-color: white;
-    padding-top: 100px;  
+    background-color: #edc6c6;
+    padding: 60px 20px; 
 }
 
 .container {
-    padding: 20px; 
+    background-color: rgb(242, 233, 191);
+    padding: 20px;
+    border-radius: 8px;
 }
+
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -20,35 +23,35 @@ html, body {
 }
 
 .card {
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
-	border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow by default */
-    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; 
     text-align: left;
     padding: 20px;
     box-sizing: border-box;
+    margin: 0 auto; 
 }
 .card:hover {
-    cursor: pointer; /* Changes the cursor to indicate it's clickable */
-    transform: scale(1.05); /* Slightly scales the card up */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker, larger shadow on hover */
+    cursor: pointer; 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Add a subtle animation for the card to appear with an initial scale */
 .animated-card {
-    animation: fadeInUp 0.6s ease-out forwards; /* Animation when the card first appears */
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Keyframe for animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Starts from below the original position */
+        transform: translateY(20px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Moves to its original position */
+        transform: translateY(0); 
     }
 }
 
