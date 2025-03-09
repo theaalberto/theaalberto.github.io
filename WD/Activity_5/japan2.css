@@ -1,0 +1,60 @@
+
+    body {
+      background-image: url('japan.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: rgb(255, 235, 101);
+      z-index: 10;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .navbar-brand img {
+      height: 30px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .navbar .navbar-text {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+  .container-fluid {
+    font-family: "Pacifico", cursive;
+  }
+
+  .book {
+    font-family: "Afacad Flux", sans-serif;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+  }
+
+.card {
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
