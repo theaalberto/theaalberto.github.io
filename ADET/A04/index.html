@@ -42,14 +42,8 @@
             background-color: #fff0f5;
         }
 
-        .topcontainer {
-            height: 15dvh;
-            background-color: #ffeaf4;
-            border-radius: 20px;
-        }
-
+        .topcontainer,
         .maincontainer {
-            height: 75dvh;
             background-color: #fff0f5;
             border-radius: 20px;
         }
@@ -92,11 +86,25 @@
             font-weight: bold;
             color: #7a3e6e;
             transition: 0.3s ease;
+            margin-right: 0.5rem;
         }
 
         .clear-btn:hover {
             background-color: #ffabbf;
             cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .custom-button.content {
+                width: 100%;
+            }
+            .col-9, .col-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .maincontainer, .topcontainer {
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -108,31 +116,32 @@
 
     <div class="container-fluid">
         <div class="row pt-3">
-            <div class="col-9">
+            <div class="col-lg-9 col-12">
                 <div class="row">
                     <div class="col pb-3">
-                        <div class="card overflow-scroll p-3 topcontainer">
-                            <div class="d-flex flex-start flex-row categories" id="categories"></div>
+                        <div class="card overflow-auto p-3 topcontainer">
+                            <div class="d-flex flex-row flex-nowrap categories" id="categories"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="card overflow-scroll p-3 maincontainer">
-                            <div class="d-flex flex-start flex-row flex-wrap" id="maincontainer"></div>
+                        <div class="card overflow-auto p-3 maincontainer">
+                            <div class="d-flex flex-wrap justify-content-start" id="maincontainer"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card p-3 overflow-scroll" style="height: 100%;">
+            <div class="col-lg-3 col-12 mt-3 mt-lg-0">
+                <div class="card p-3" style="height: 100%;">
                     <div id="receipt"></div>
                     <div class="mt-4 d-flex flex-row justify-content-between">
                         <div><b>TOTAL</b></div>
                         <div><b id="totalValue">0</b></div>
                     </div>
-                    <div class="mt-3 text-center">
-                        <button class="clear-btn" onclick="clearReceipt()">Clear</button>
+                    <div class="mt-3 d-flex justify-content-center">
+                        <button class="clear-btn d-none" id="clearBtn" onclick="clearReceipt()">Clear</button>
+                        <button class="clear-btn" onclick="alert('Checkout feature coming soon!')">Checkout</button>
                     </div>
                 </div>
             </div>
@@ -223,12 +232,12 @@
                     </div>
                 `;
             });
+            loadProducts(0); 
         }
 
         function loadProducts(categoryIndex) {
             var maincontainer = document.getElementById("maincontainer");
             maincontainer.innerHTML = "";
-
             products[categoryIndex].contents.forEach(content => {
                 if (content.isAvailable) {
                     maincontainer.innerHTML += `
@@ -243,7 +252,7 @@
 
         function addToReceipt(price, code) {
             var receiptContainer = document.getElementById("receipt");
-            total = parseFloat(total) + parseFloat(price);
+            total += parseFloat(price);
             document.getElementById("totalValue").innerHTML = total;
             receiptContainer.innerHTML += `
                 <div class="d-flex flex-row justify-content-between">
@@ -251,12 +260,14 @@
                     <div><small>${price}</small></div>
                 </div>
             `;
+            document.getElementById("clearBtn").classList.remove("d-none");
         }
 
         function clearReceipt() {
             document.getElementById("receipt").innerHTML = "";
             total = 0;
             document.getElementById("totalValue").innerHTML = total;
+            document.getElementById("clearBtn").classList.add("d-none");
         }
 
         loadCategories();
